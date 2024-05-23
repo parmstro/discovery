@@ -1,0 +1,5 @@
+---
+
+# discovery_action == archive
+# create archive folder if it does not exist
+#   copy scan results to (timestamped file with scan identifier) to archive location

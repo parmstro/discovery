@@ -1,0 +1,6 @@
+---
+
+# discovery_action == configure
+# use hostvars to configure
+#   sources
+#   credentials

@@ -1,0 +1,13 @@
+---
+# Encrypt this file with ansible-vault
+
+# NOTE: passwords must be >= 10 characters
+
+discovery_pgsql_username: "dsc"                                        # not-secret
+discovery_pgsql_password: "notsecret1234"                              # not-secret
+discovery_qpc_dbms_username: "{{ discovery_pgsql_username }}"          # not-secret
+discovery_qpc_dbms_password: "{{ discovery_pgsql_password }}"          # not-secret
+
+discovery_server_username: "admin"                                     # not-secret
+discovery_server_password: "{{ discovery_pgsql_password }}"            # not-secret
+discovery_server_user_email: "admin@example.com"                       # not-secret

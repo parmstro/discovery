@@ -1,0 +1,6 @@
+---
+
+# discovery_action == uninstall
+# stop the discovery containers
+# clean up the pod
+# clean up the directories

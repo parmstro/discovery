@@ -1,0 +1,53 @@
+---
+
+# enter your source configurations here
+
+discovery_sources:
+  - name: "example.com range"
+    type: "network_range"     # valid values  network_range, openshift, rhacs, satellite, vmware, ansible_controller
+    search_addresses:
+      - "192.168.252.0/22"
+      - "192.168.140.0/24"
+      - "192.168.42.42"
+      - "test*.example.com"
+      - "specific.example.com"
+    port: "22"
+    credentials:
+      - "machine_cred1"
+      - "machine_cred2"
+    use_paramiko: false
+  - name: "example.com openshift"
+    type: openshift
+    mgmt_host: "osp1.example.com"
+    connection: "SSLv23"  # valid values: SSLv23, TLSv1.2, Disable_SSL"
+    credentials:
+      - "openshift_cred1"
+    validate_certs: true
+  - name: "example.com rhacs"
+    type: "rhacs"
+    mgmt_host: "rhacs.example.com"
+    connection: "SSLv23"  # valid values: SSLv23, TLSv1.2, Disable_SSL"
+    credentials:
+      - "rhacs_cred1"
+    validate_certs: true
+  - name: "example.com satellite"
+    type: "satellite"
+    mgmt_host: "satellite.example.com"
+    connection: "SSLv23"  # valid values: SSLv23, TLSv1.2, Disable_SSL"
+    credentials:
+      - "sat_cred1"
+    validate_certs: true
+  - name: "example.com vmware"
+    type: "vmware"
+    mgmt_host: "vcenter.example.com"
+    connection: "SSLv23"  # valid values: SSLv23, TLSv1.2, Disable_SSL"
+    credentials:
+      - "vmware_cred1"
+    validate_certs: true
+  - name: "example.com ansible_controller"
+    type: "vmware"
+    mgmt_host: "controller.example.com"
+    connection: "SSLv23"  # valid values: SSLv23, TLSv1.2, Disable_SSL"
+    credentials:
+      - "controller_cred1"
+    validate_certs: true

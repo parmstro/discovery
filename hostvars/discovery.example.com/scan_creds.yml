@@ -1,0 +1,46 @@
+---
+# A list of credentials to add to the discovery discovery-server
+
+discovery_credentials:
+  - name: "machine_cred1"
+    type: "network"
+    authentication_type: "password" # valid values: password, sshkey, token
+    username: "{{ machine_cred1_username_vault }}"
+    password: "{{ machine_cred1_password_vault }}"
+    become_method: "sudo"   # valid values:  sudo, su, pbrun, pfexec, doas, dzdo, ksu, runas
+    become_username: "{{ machine_cred1_become_username_vault }}"
+    become_password: "{{ machine_cred1_become_username_vault }}"
+  - name: "machine_cred2"
+    type: "network"
+    authentication_type: "sshkey" # valid values: password, sshkey, token
+    username: "{{ machine_cred2_sshkeyfile_username_vault }}"
+    password: "{{ machine_cred2_sshkeyfile_password_vault }}"
+    sshkey_file_path: "{{ machine_cred2_sshkeyfile_path_vault }}"
+    become_method: "sudo"   # valid values:  sudo, su, pbrun, pfexec, doas, dzdo, ksu, runas
+    become_username: "{{ machine_cred2_become_username_vault }}"
+    become_password: "{{ machine_cred2_become_username_vault }}"
+  - name: "machine_cred3"
+    type: "network"
+    authentication_type: "token" # valid values: password, sshkey, token
+    token: "{{ machine_cred3_token_vault }}"
+    become_method: "sudo"   # valid values:  sudo, su, pbrun, pfexec, doas, dzdo, ksu, runas
+    become_username: "{{ machine_cred3_become_username_vault }}"
+    become_password: "{{ machine_cred3_become_username_vault }}"
+  - name: "openshift_cred1"
+    type: "openshift"
+    token: "{{ openshift_cred1_token_vault }}"
+  - name: "rhacs_cred1"
+    type: "rhacs"
+    token: "{{ rhacs_cred1_token_vault }}"
+  - name: "satellite_cred1"
+    type: "satellite"
+    username: "{{ satellite_cred1_username_vault }}"
+    password: "{{ satellite_cred1_password_vault }}"
+  - name: "vcenter_cred1"
+    type: "vcenter"
+    username: "{{ vcenter_cred1_username_vault }}"
+    password: "{{ vcenter_cred1_password_vault }}"
+  - name: "ansible_controller_cred1"
+    type: "ansible_controller"
+    username: "{{ ansible_controller_cred1_username_vault }}"
+    password: "{{ ansible_controller_cred1_password_vault }}"

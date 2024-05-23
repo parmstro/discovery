@@ -1,0 +1,27 @@
+---
+
+# entrypoint for the role
+
+- name: "Install discovery system"
+  when: discovery_action == "install"
+  ansible.builtin.include_tasks: install.yml
+
+- name: "Configure discovery system"
+  when: discovery_action == "configure"
+  ansible.builtin.include_tasks: configure.yml
+
+- name: "Run scan"
+  when: discovery_action == "scan"
+  ansible.builtin.include_tasks: scan.yml
+
+- name: "Submit scan"
+  when: discovery_action == "submit"
+  ansible.builtin.include_tasks: submit.yml
+
+- name: "Archive data"
+  when: discovery_action == "archive"
+  ansible.builtin.include_tasks: archive.yml
+
+- name: "Uninstall discovery system"
+  when: discovery_action == "uninstall"
+  ansible.builtin.include_tasks: uninstall.yml

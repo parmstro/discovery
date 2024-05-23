@@ -1,0 +1,8 @@
+---
+
+# discovery_action == install
+# login to registry
+# pull container images
+# configure directories
+# launch containers and create pod
+# output url for Web UI
