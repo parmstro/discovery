@@ -21,7 +21,7 @@ podman run --name dsc-db \
   -v dsc-data:$DISCOVERY_PGDATA \
   -d registry.redhat.io/rhel9/postgresql-15:latest
   
-  podman run \
+podman run \
   --name discovery \
   --restart on-failure \
   --pod discovery-pod \
