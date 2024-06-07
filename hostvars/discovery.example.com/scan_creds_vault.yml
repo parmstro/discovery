@@ -1,0 +1,31 @@
+---
+
+# vault for scan credentials - encrypt with ansible-vault
+
+machine_cred1_username_vault: "ansible-controller"                           # not-secret
+machine_cred1_password_vault: "supersecret"                                  # not-secret
+machine_cred1_become_username_vault: "become-user"                           # not-secret
+machine_cred1_become_password_vault: "supersecret"                           # not-secret
+
+machine_cred2_sshkeyfile_path_vault: "put_your_sshkeyfile_path_here"         # not-secret
+machine_cred2_sshkeyfile_password_vault: "supersecret"                       # not-secret
+machine_cred2_sshkeyfile_username_vault: "admin"                             # not-secret
+machine_cred2_become_username_vault: "become-user"                           # not-secret
+machine_cred2_become_password_vault: "supersecret"                           # not-secret
+
+machine_cred3_token_vault: "enter_your_token_here"                           # not-secret
+machine_cred3_become_username_vault: "become-user"                           # not-secret
+machine_cred3_become_password_vault: "supersecret"                           # not-secret
+
+openshift_cred1_token_vault: "enter_your_token_here"                         # not-secret
+
+rhacs_cred1_token_vault: "enter_your_token_here"                             # not-secret
+
+satellite_cred1_username_vault: "satellite_username"                         # not-secret
+satellite_cred1_password_vault: "supersecret"                                # not-secret
+
+vcenter_cred1_username_vault: "vcenter_username"                             # not-secret
+vcenter_cred1_password_vault: "supersecret"                                  # not-secret
+
+ansible_controller_cred1_username_vault: "ansible_controller_username"       # not-secret
+ansible_controller_cred1_password_vault: "supersecret"                       # not-secret

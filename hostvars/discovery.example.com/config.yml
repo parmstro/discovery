@@ -1,0 +1,35 @@
+---
+# Basic configuration variables for discovery
+
+discovery_container_repository: "registry.redhat.io"
+discovery_target_release: "rhel9"   # valid values: rhel8,rhel9
+discovery_pod_name: "discovery-pod"
+discovery_pod_restart_condition: "on-failure"
+discovery_pod_http_mapping: "9443:443"
+
+discovery_postgresql_image: "postgresql-15"
+discovery_postgresql_image_tag: "latest"
+discovery_db_container_name: "dsc-db"
+
+discovery_pgdata_path: "~/.discovery/pgsql/data"
+discovery_pgsql_database: "dcs-db"
+
+
+# NOTE: image naming should follow other conventions
+# sub directory for release e.g. "rhel9"
+# image name: discovery-server
+# this makes automation easier
+discovery_image: "discovery-server-rhel9"
+discovery_image_tag: "latest"
+discovery_container_name: "discovery"
+
+discovery_data_path: "~/.discovery/data"
+discovery_log_path: "~/.discovery/log"
+discovery_sshkeys_path: "~/.discovery/sshkeys"
+discovery_django_debug: false
+discovery_net_connect_timeout: 60
+discovery_net_inspect_timeout: 600
+discovery_production: true
+discovery_qpc_dbms_host: "localhost"
+discovery_qpc_dbms_database: "{{ discovery_pgsql_database }}"
+discovery_server_timeout: 120

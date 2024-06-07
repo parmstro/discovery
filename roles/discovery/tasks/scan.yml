@@ -1,0 +1,7 @@
+---
+
+# discovery_action == scan
+# use hostvars or extra vars to
+#   configure scans
+#   launch scans
+#   optionally monitor for completion

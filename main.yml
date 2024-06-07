@@ -1,0 +1,10 @@
+---
+
+- name: "Apply the discovery role action to discovery servers"
+  hosts: discovery_servers
+  become: true
+  vars:
+    discovery_action: "install"  # valid values: install, configure, scan, submit, archive, uninstall
+
+  roles:
+    - discovery

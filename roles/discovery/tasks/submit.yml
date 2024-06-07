@@ -1,0 +1,6 @@
+---
+
+# discovery_action == submit
+# preprocess the reports (zip and encrypt)
+# submit reports to console.redhat.com
+# write report record (timestamped file with report identifier guid) to archive location
