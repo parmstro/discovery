@@ -1,5 +1,8 @@
 # discovery
 Quick setup for discovery tool for inventorying your RHEL environment.
+For now we use the discovery_install, discovery_start, discovery_stop bash scripts.
+
+develop branch discovery ansible module to deliver and configure discovery point of presense.
 
 Idealized workflow:
   - install the discovery system on one or more hosts
